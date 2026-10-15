@@ -1,59 +1,1315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EveryReturn | Reclaim Your Space & Your Refund</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- SEO Meta Tags -->
+    <title>EveryReturn | Return Anything. Without Leaving Home.</title>
+    <meta name="description" content="EveryReturn is the premier on-demand package return pickup service in Metro Detroit. We collect your Amazon, UPS, FedEx, and retail returns so you never have to leave home or wait in lines again.">
+    <meta name="keywords" content="return pickup service, package return pickup, Amazon return pickup, UPS return pickup, FedEx return pickup, online shopping returns, doorstep return service, return courier service, product return pickup, Detroit return service, Metro Detroit package pickup, reverse logistics service">
+    <link rel="canonical" href="https://everyreturn.com/">
+    <meta name="author" content="EveryReturn Inc.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563EB">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://everyreturn.com/">
+    <meta property="og:title" content="EveryReturn | Return Anything. Without Leaving Home.">
+    <meta property="og:description" content="Stop driving across town for returns. We pick up your Amazon, UPS, and retail returns right from your doorstep in Metro Detroit.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://everyreturn.com/">
+    <meta property="twitter:title" content="EveryReturn | Return Anything. Without Leaving Home.">
+    <meta property="twitter:description" content="Stop driving across town for returns. We pick up your Amazon, UPS, and retail returns right from your doorstep in Metro Detroit.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data (JSON-LD optimized for AI Assistants & Search Engines) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://everyreturn.com/#organization",
+          "name": "EveryReturn",
+          "url": "https://everyreturn.com",
+          "logo": "https://everyreturn.com/logo.png",
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://everyreturn.com/#website",
+          "url": "https://everyreturn.com",
+          "name": "EveryReturn",
+          "publisher": {
+            "@id": "https://everyreturn.com/#organization"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://everyreturn.com/#localbusiness",
+          "name": "EveryReturn",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+          "priceRange": "$15-$50",
+          "description": "On-demand doorstep package return pickup service in Metro Detroit. We collect Amazon, UPS, FedEx, Kohl's, and retail returns.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Detroit",
+            "addressRegion": "MI",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 42.3314,
+            "longitude": -83.0458
+          },
+          "areaServed": "Metro Detroit"
+        },
+        {
+          "@type": "Service",
+          "serviceType": "Package Return Pickup",
+          "provider": {
+            "@id": "https://everyreturn.com/#organization"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Metro Detroit"
+          },
+          "description": "On-demand doorstep pickup service for online shopping returns including Amazon, UPS, FedEx, and retail stores."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is EveryReturn?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EveryReturn is an on-demand doorstep package return pickup service operating in Metro Detroit that collects online shopping returns so customers never have to leave home or wait in lines."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does EveryReturn cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Standard returns are $15–$25 with no subscriptions required. Oversized items are an additional +$25."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does pickup take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can select a convenient 2-hour window, and our professional driver will arrive to pick up your items directly from your doorstep."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Embedded CSS -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: linear-gradient(135deg, #f0fdf4 0%, #eef2ff 100%); }
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-        .accent-green { color: #10b981; }
-        .bg-logistics { background-color: #0f172a; }
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --emerald: #10B981;
+            --amber: #F59E0B;
+            --dark: #0F172A;
+            --gray-600: #475569;
+            --gray-100: #F1F5F9;
+            --bg: #F8FAFC;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --radius-lg: 1.5rem;
+            --radius-md: 1rem;
+            --radius-full: 9999px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.025em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-full);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--dark);
+            border: 1px solid #E2E8F0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--gray-100);
+            transform: translateY(-2px);
+            border-color: #CBD5E1;
+        }
+
+        /* Glassmorphism Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(248, 250, 252, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5rem;
+        }
+
+        .logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--gray-600);
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 9rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
+                        radial-gradient(circle at 10% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.15);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+
+        .hero-bullets {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .hero-bullets div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-bullets i {
+            color: var(--emerald);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Dashboard Mockup Card */
+        .hero-visual {
+            position: relative;
+        }
+
+        .dashboard-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            padding: 2rem;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            position: relative;
+            z-index: 2;
+            max-width: 420px;
+            margin: 0 auto;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #F1F5F9;
+        }
+
+        .dispatch-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--emerald);
+            padding: 0.35rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .item-preview {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            background: #F8FAFC;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.5rem;
+        }
+
+        .item-preview img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 0.75rem;
+        }
+
+        .item-details h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .item-details p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+        .route-info {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            display: grid;
+            gap: 0.5rem;
+            background: var(--white);
+            border: 1px solid #E2E8F0;
+            padding: 0.875rem;
+            border-radius: var(--radius-md);
+        }
+
+        .route-info strong {
+            color: var(--dark);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.4rem;
+            top: 0.25rem;
+            bottom: 0.25rem;
+            width: 2px;
+            background: #E2E8F0;
+        }
+
+        .timeline-step {
+            position: relative;
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .timeline-step.completed {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .timeline-step::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0.35rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #CBD5E1;
+        }
+
+        .timeline-step.completed::before {
+            background: var(--emerald);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+
+        /* Section Layouts */
+        .section-padding {
+            padding: 7rem 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .feature-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--white);
+            border-top: 1px solid #E2E8F0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .step-card {
+            background: #F8FAFC;
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #E2E8F0;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .step-number {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            opacity: 0.4;
+            margin-bottom: 1rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* Instant Estimate Calculator */
+        .calculator-wrapper {
+            max-width: 750px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            border: 1px solid #E2E8F0;
+            box-shadow: var(--shadow-xl);
+            padding: 3rem;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .calc-output {
+            background: #F8FAFC;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #E2E8F0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calc-price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0.5rem 0;
+        }
+
+        /* Social Impact Section */
+        .impact-banner {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 5rem 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .impact-content h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+        }
+
+        .impact-content p {
+            color: #94A3B8;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(8px);
+        }
+
+        .stat-number {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--emerald);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #CBD5E1;
+        }
+
+        /* Split Section / Why Choose */
+        .split-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .benefits-list {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid #E2E8F0;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .benefit-item i {
+            color: var(--emerald);
+            font-size: 1.25rem;
+        }
+
+        .illustration-box {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(16, 185, 129, 0.08) 100%);
+            border-radius: var(--radius-lg);
+            padding: 4rem 2rem;
+            text-align: center;
+            border: 1px solid rgba(37, 99, 235, 0.15);
+        }
+
+        .illustration-box i {
+            font-size: 6rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid #E2E8F0;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: var(--amber);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .customer-info h4 {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .customer-info span {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        /* Coverage Area */
+        .coverage-banner {
+            background: var(--white);
+            border: 1px solid #E2E8F0;
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow-md);
+        }
+
+        .coverage-content h3 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .coverage-content p {
+            color: var(--gray-600);
+            font-size: 1.125rem;
+            max-width: 600px;
+        }
+
+        /* FAQ Accordion */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid #E2E8F0;
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--dark);
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+            padding: 0 1.5rem;
+            color: var(--gray-600);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 250px;
+            padding-bottom: 1.5rem;
+            transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, #1E40AF 100%);
+            color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 5rem 2rem;
+            text-align: center;
+            margin: 5rem auto;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            color: #E0E7FF;
+        }
+
+        .final-cta .btn-primary {
+            background: var(--white);
+            color: var(--primary);
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+        }
+
+        .final-cta .btn-primary:hover {
+            background: #F8FAFC;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--white);
+            border-top: 1px solid #E2E8F0;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col ul {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .footer-col a {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #F1F5F9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark);
+            transition: all 0.2s;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #F1F5F9;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #CBD5E1;
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+            background: var(--white);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-grid, .split-grid, .impact-banner, .coverage-banner, .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .features-grid, .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .features-grid, .testimonials-grid, .steps-grid, .impact-stats {
+                grid-template-columns: 1fr;
+            }
+            .hero-cta-group {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+            .coverage-banner {
+                padding: 2.5rem 1.5rem;
+            }
+        }
     </style>
 </head>
-<body class="text-slate-800 antialiased">
+<body>
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tight text-blue-600"><img class="h-12 max-w-sm" src="https://thefirstprototype.com/everyreturn/everyreturn.png"></img></div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#how-it-works" class="hover:text-blue-600 transition">How it Works</a>
-                <a href="#specialized" class="hover:text-blue-600 transition">Services</a>
-                <a href="#runners" class="hover:text-emerald-600 transition">Become a Runner</a>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-box-open" style="color: var(--primary);"></i> Every<span>Return</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#calculator">Pricing</a>
+                <a href="#impact">Our Impact</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://every-return.web.app/" class="btn btn-primary" style="padding: 0.6rem 1.25rem; font-size: 0.9rem;">Schedule Pickup</a>
             </div>
-            <a href="https://every-return.web.app" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition">Schedule a Return</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- 1. Hero Section -->
-    <section class="hero-gradient overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 pt-16 pb-24 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 space-y-6">
-                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-slate-900">
-                    Do you really <br><span class="text-blue-600">need it?</span>
-                </h1>
-                <p class="text-xl text-slate-600 max-w-lg">
-                    Stop letting unreturned boxes clutter your home and your mind. We pick up your online returns and handle the drop-off for you. You get your money back; we do the driving.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="https://every-return.web.app"><button class="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:bg-blue-700 transition">Schedule a Return</button></a>
-                    <a href="https://every-return.web.app"><button class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl text-lg font-bold shadow-sm hover:bg-slate-50 transition">Become a Runner</button></a>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" style="display: none; position: fixed; top: 5rem; left: 0; width: 100%; background: var(--white); border-bottom: 1px solid #E2E8F0; padding: 1.5rem; z-index: 999; box-shadow: var(--shadow-md);">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <a href="#features" onclick="toggleMobileMenu()" style="font-weight: 600;">Features</a>
+            <a href="#how-it-works" onclick="toggleMobileMenu()" style="font-weight: 600;">How It Works</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" style="font-weight: 600;">Pricing</a>
+            <a href="#impact" onclick="toggleMobileMenu()" style="font-weight: 600;">Our Impact</a>
+            <a href="#faq" onclick="toggleMobileMenu()" style="font-weight: 600;">FAQ</a>
+            <a href="https://every-return.web.app/" class="btn btn-primary" style="width: 100%; text-align: center;">Schedule Pickup</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-bolt"></i> On-Demand Return Courier in Metro Detroit
+                    </div>
+                    <h1>Returning Packages Shouldn't Take Your Entire Afternoon.</h1>
+                    <p>Upload a photo, schedule a pickup, and we'll handle the rest. No driving. No waiting. No lines.</p>
+                    <div class="hero-bullets">
+                        <div><i class="fa-solid fa-circle-check"></i> No Driving</div>
+                        <div><i class="fa-solid fa-circle-check"></i> No Lines</div>
+                        <div><i class="fa-solid fa-circle-check"></i> Zero Hassle</div>
+                    </div>
+                    <div class="hero-cta-group">
+                        <a href="https://every-return.web.app/" class="btn btn-primary">
+                            Schedule My Return <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#how-it-works" class="btn btn-secondary">
+                            How It Works
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-card">
+                        <div class="dashboard-header">
+                            <span class="dispatch-badge">Active Dispatch</span>
+                            <span style="font-size: 0.85rem; color: var(--gray-600);"><i class="fa-regular fa-clock"></i> Today, 2:15 PM</span>
+                        </div>
+                        <div class="item-preview">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" alt="Returned Shoes" loading="lazy" decoding="async">
+                            <div class="item-details">
+                                <h4>Nike Air Max 270</h4>
+                                <p>Amazon Return • $140.00</p>
+                            </div>
+                        </div>
+                        <div class="route-info">
+                            <div><strong>Pickup:</strong> Front Porch Mat</div>
+                            <div><strong>Drop-off:</strong> UPS Store #402</div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-step completed">
+                                <span>Booked & Confirmed ($18)</span>
+                                <i class="fa-solid fa-check" style="color: var(--emerald);"></i>
+                            </div>
+                            <div class="timeline-step completed">
+                                <span>Driver Marcus picked up package</span>
+                                <i class="fa-solid fa-check" style="color: var(--emerald);"></i>
+                            </div>
+                            <div class="timeline-step">
+                                <span>Returned successfully</span>
+                            </div>
+                            <div class="timeline-step">
+                                <span>Digital receipt uploaded</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="md:w-1/2 mt-12 md:mt-0 relative">
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                    <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?auto=format&fit=crop&w=800&q=80" alt="Runner picking up return" class="w-full h-auto">
-                    <!-- Overlay QR Badge -->
-                    <div class="absolute bottom-6 left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-emerald-100">
-                        <div class="bg-emerald-100 p-3 rounded-lg"><i class="fa-solid fa-qrcode text-emerald-600 text-2xl"></i></div>
-                        <div>
-                            <p class="text-xs font-bold uppercase text-slate-400">Status</p>
-                            <p class="text-sm font-bold text-slate-800">QR Code Matched</p>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Designed for Ultimate Convenience</h2>
+                <p>We’ve re-engineered the entire return process from the ground up so you can reclaim your weekends.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <h3>Doorstep Pickup</h3>
+                    <p>Leave your packages safely on your porch mat. You don't even need to be home to greet our driver.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-route"></i></div>
+                    <h3>Real-Time Updates</h3>
+                    <p>Track your driver's dispatch status and get instant SMS or push updates when your return is complete.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-receipt"></i></div>
+                    <h3>Digital Receipts</h3>
+                    <p>No more paper slips to lose. Instantly receive official store scan receipts straight to your phone or email.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Instant Pricing</h3>
+                    <p>Transparent flat rates calculated upfront before you book. Absolutely zero hidden fees or subscription traps.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Secure Payments</h3>
+                    <p>Checkout instantly and securely with Apple Pay, Google Pay, or major credit cards via Stripe.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Professional Drivers</h3>
+                    <p>Background-checked, highly trained courier partners handle your expensive merchandise with extreme care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section-padding how-it-works">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>How EveryReturn Works</h2>
+                <p>Four effortless steps to never visiting a shipping center again.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Upload Your Item</h3>
+                    <p>Take a picture of the item and tell us where it needs to go (Amazon, UPS, Kohl's, etc.).</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Receive Instant Pricing</h3>
+                    <p>Know exactly what your pickup will cost before confirming your dispatch window.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Driver Picks It Up</h3>
+                    <p>Stay home and relax while our professional driver retrieves your items from your doorstep.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Done</h3>
+                    <p>Receive confirmation, return verification, and your official digital receipt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instant Estimate Calculator -->
+    <section id="calculator" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Instant Estimate Calculator</h2>
+                <p>Calculate your pickup cost upfront with our transparent pricing tool.</p>
+            </div>
+            <div class="calculator-wrapper">
+                <div class="calc-grid">
+                    <div>
+                        <div class="form-group">
+                            <label for="itemCount">Number of Items</label>
+                            <input type="number" id="itemCount" class="form-control" value="1" min="1" max="10" oninput="calculateEstimate()">
+                        </div>
+                        <div class="form-group">
+                            <label for="itemSize">Package Size</label>
+                            <select id="itemSize" class="form-control" onchange="calculateEstimate()">
+                                <option value="standard">Standard Box / Bag ($15)</option>
+                                <option value="medium">Medium Package ($20)</option>
+                                <option value="large">Large / Oversized (+$25)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="distance">Pickup Zone</label>
+                            <select id="distance" class="form-control" onchange="calculateEstimate()">
+                                <option value="metro">Metro Detroit Core ($0 extra)</option>
+                                <option value="suburb">Outer Suburb (+$5)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calc-output">
+                        <span style="font-size: 0.9rem; color: var(--gray-600); font-weight: 600; text-transform: uppercase;">Estimated Total</span>
+                        <div class="calc-price" id="calcResult">$15.00</div>
+                        <p style="font-size: 0.85rem; color: var(--gray-600); margin-bottom: 1.5rem;">No subscription required. Includes driver tracking & digital receipt.</p>
+                        <a href="https://every-return.web.app/" class="btn btn-primary" style="width: 100%;">Book This Pickup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Impact Section -->
+    <section id="impact" class="section-padding" style="background: #F1F5F9;">
+        <div class="container">
+            <div class="impact-banner">
+                <div class="impact-content">
+                    <h3>More Than a Courier Service: Creating Community Impact</h3>
+                    <p>EveryReturn was founded on the belief that convenience shouldn't come at the expense of our community. By employing local Detroit drivers, we provide flexible, dignified jobs that feed families while giving elderly residents, busy parents, and disabled individuals vital access to seamless commerce.</p>
+                    <a href="https://every-return.web.app/" class="btn btn-primary" style="background: var(--white); color: var(--dark);">Support Local Drivers</a>
+                </div>
+                <div class="impact-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Metro Detroit Locally Employed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4,200+</div>
+                        <div class="stat-label">Hours Saved For Parents & Seniors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$35K+</div>
+                        <div class="stat-label">Local Driver Earnings Generated</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12,000+</div>
+                        <div class="stat-label">Car Trips Eliminated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Section / Why Choose EveryReturn -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="split-grid">
+                <div class="illustration-box">
+                    <i class="fa-solid fa-couch"></i>
+                    <h3 style="font-size: 1.5rem; color: var(--dark); margin-bottom: 0.5rem;">Stay on the Couch</h3>
+                    <p style="color: var(--gray-600);">Let us brave the traffic and the long lines so you don't have to.</p>
+                </div>
+                <div>
+                    <span class="hero-badge"><i class="fa-solid fa-heart"></i> Reclaim Your Time</span>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--dark); margin-bottom: 1.5rem;">Instead of spending an hour making one return...</h2>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-check"></i> Stay home and relax
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-check"></i> Keep working without lunch-break interruptions
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-check"></i> Spend quality time with family and young children
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fa-solid fa-check"></i> Never miss a merchant return deadline again
                         </div>
                     </div>
                 </div>
@@ -61,189 +1317,246 @@
         </div>
     </section>
 
-    <!-- 2. The Guilt-Free Section -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">We’ve all been there.</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">"Most people lose $150+ a year in 'ghost returns'—items they bought but never sent back. We charge a fraction of that to put that money back in your bank account."</p>
+    <!-- Testimonials Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Loved by Busy Locals</h2>
+                <p>See what our early customers in Metro Detroit have to say.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-8 rounded-2xl bg-slate-50 card-hover border border-slate-100">
-                    <div class="text-blue-500 mb-4 text-3xl"><i class="fa-solid fa-box-archive"></i></div>
-                    <h3 class="font-bold text-lg mb-2">The "Return Pile"</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">That box in your hallway that’s been staring at you for three weeks.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-50 card-hover border border-slate-100">
-                    <div class="text-red-400 mb-4 text-3xl"><i class="fa-solid fa-calendar-xmark"></i></div>
-                    <h3 class="font-bold text-lg mb-2">The Missed Window</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">You finally have time to go, but the return date passed yesterday.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-50 card-hover border border-slate-100">
-                    <div class="text-orange-400 mb-4 text-3xl"><i class="fa-solid fa-receipt"></i></div>
-                    <h3 class="font-bold text-lg mb-2">The Kohl’s Trap</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Go to return an item, get a coupon, and end up spending $50 more.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-slate-50 card-hover border border-slate-100">
-                    <div class="text-emerald-500 mb-4 text-3xl"><i class="fa-solid fa-print"></i></div>
-                    <h3 class="font-bold text-lg mb-2">The Tech Gap</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Don’t have a printer? Don’t know how to navigate the portal? We’ve got you.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. How It Works -->
-    <section id="how-it-works" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-16 text-center">Your return, handled in 3 steps.</h2>
-            <div class="grid md:grid-cols-3 gap-12 relative">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
-                    <h3 class="text-xl font-bold mb-3">Upload & Quote</h3>
-                    <p class="text-slate-400">Paste the product URL and store address. Our system calculates the value and fee instantly.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
-                    <h3 class="text-xl font-bold mb-3">Share the Code</h3>
-                    <p class="text-slate-400">Upload a screenshot of your Return QR code. No printer? No problem.</p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
-                    <h3 class="text-xl font-bold mb-3">Set it and Forget it</h3>
-                    <p class="text-slate-400">Put the item on your porch. A Runner picks it up, drops it off, and you get your refund.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Specialized Services -->
-    <section id="specialized" class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="border border-slate-200 p-8 rounded-3xl hover:border-blue-300 transition shadow-sm">
-                    <h4 class="text-blue-600 font-bold uppercase tracking-wider text-xs mb-2">EveryReturn Tuesdays</h4>
-                    <h3 class="text-xl font-bold mb-4">For Office Buildings</h3>
-                    <p class="text-slate-600">Mass pickups at your office between 10 AM and 1 PM. Clear your desk, clear your mind.</p>
-                </div>
-                <div class="border border-slate-200 p-8 rounded-3xl hover:border-emerald-300 transition shadow-sm">
-                    <h4 class="text-emerald-600 font-bold uppercase tracking-wider text-xs mb-2">Concierge Care</h4>
-                    <h3 class="text-xl font-bold mb-4">For Assisted Living</h3>
-                    <p class="text-slate-600">High-touch service for seniors. We help bridge the gap between online shopping and physical returns.</p>
-                </div>
-                <div class="border border-slate-200 p-8 rounded-3xl hover:border-orange-300 transition shadow-sm">
-                    <h4 class="text-orange-600 font-bold uppercase tracking-wider text-xs mb-2">Earth-First</h4>
-                    <h3 class="text-xl font-bold mb-4">Can't return it?</h3>
-                    <p class="text-slate-600">We’ll take it to a local donation center for you so it doesn't end up in a landfill.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Choose Your Path -->
-    <section id="runners" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col lg:flex-row gap-8">
-                <!-- Customer Path -->
-                <div class="lg:w-1/2 bg-white p-12 rounded-3xl shadow-xl border border-blue-100">
-                    <h3 class="text-3xl font-bold mb-6">I Have a Return</h3>
-                    <ul class="space-y-4 mb-10 text-slate-600">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Reclaim your space.</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Get your money back faster.</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-500"></i> Pricing based on value and distance.</li>
-                    </ul>
-                    <a href="https://every-return.web.app"><button class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition">Get Started</button></a>
-                </div>
-                <!-- Runner Path -->
-                <div class="lg:w-1/2 bg-slate-900 p-12 rounded-3xl shadow-xl text-white">
-                    <h3 class="text-3xl font-bold mb-6">I Want to Drive</h3>
-                    <ul class="space-y-4 mb-10 text-slate-300">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Be your own boss.</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Maximize your commute.</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i> Proprietary "Scan-to-Match" app.</li>
-                    </ul>
-                    <a href="https://every-return.web.app"><button class="w-full bg-emerald-500 text-slate-900 py-4 rounded-xl font-bold text-lg hover:bg-emerald-400 transition">Apply to Run</button></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Pricing Logic / Quote Simulator -->
-    <section id="quote" class="py-24">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Transparent Pricing</h2>
-            <p class="text-slate-500 mb-12">How do we charge? We use the item's value and the Runner’s route to ensure fairness.</p>
-            
-            <div class="bg-white border-2 border-slate-100 p-2 rounded-2xl shadow-lg flex flex-col md:flex-row gap-2">
-                <input type="text" placeholder="Paste Product URL (Amazon, Target, etc.)" class="flex-grow p-4 rounded-xl outline-none focus:bg-slate-50">
-                <button class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition" onclick="alert('This functionality is coming soon...')">Get Quick Quote</button>
-            </div>
-            <p class="mt-4 text-xs text-slate-400 font-medium italic">* Minimum pickup fee applies to ensure our Runners are paid fairly.</p>
-        </div>
-    </section>
-
-    <!-- 7. FAQ Section -->
-    <section class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center">Common Questions</h2>
-            <div class="space-y-6">
-                <details class="group border-b border-slate-200 pb-4">
-                    <summary class="list-none flex justify-between items-center cursor-pointer font-bold text-lg text-slate-800">
-                        How do you know which item is which?
-                        <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="mt-4 text-slate-600">Our app matches your uploaded photo and QR code to the physical item during the scan-and-match process at pickup.</p>
-                </details>
-                <details class="group border-b border-slate-200 pb-4">
-                    <summary class="list-none flex justify-between items-center cursor-pointer font-bold text-lg text-slate-800">
-                        Is my data safe?
-                        <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="mt-4 text-slate-600">Yes. We only use your QR code and address for the specific duration of the return transaction.</p>
-                </details>
-                <details class="group border-b border-slate-200 pb-4">
-                    <summary class="list-none flex justify-between items-center cursor-pointer font-bold text-lg text-slate-800">
-                        What if the return window is closed?
-                        <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
-                    </summary>
-                    <p class="mt-4 text-slate-600">If the vendor won't take it, we can divert the item to one of our partner donation centers so it stays out of the landfill.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-12 border-b border-slate-800 pb-12">
-                <div>
-                    <div class="text-2xl font-bold text-white mb-4"><img class="h-12 max-w-sm" src="https://thefirstprototype.com/everyreturn/everyreturn-white.png"></img></div>
-                    <p class="max-w-xs italic text-slate-500">Bringing the store back to the store.</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
                     <div>
-                        <h5 class="text-white font-bold mb-4">Company</h5>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:text-emerald-400">About Us</a></li>
-                            <li><a href="#" class="hover:text-emerald-400">Support</a></li>
-                            <li><a href="#" class="hover:text-emerald-400">Privacy Policy</a></li>
-                        </ul>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"I returned three Amazon packages without leaving my house. As a mother of twins, not having to strap car seats in just to stand in a UPS line is a total lifesaver!"</p>
                     </div>
+                    <div class="customer-info">
+                        <h4>Sarah Jenkins</h4>
+                        <span>Birmingham, MI</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
                     <div>
-                        <h5 class="text-white font-bold mb-4">Apps</h5>
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="#" class="hover:text-emerald-400">Customer App (iOS)</a></li>
-                            <li><a href="#" class="hover:text-emerald-400">Driver App (Android)</a></li>
-                            <li><a href="#" class="hover:text-emerald-400">Merchant Portal</a></li>
-                        </ul>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"I used EveryReturn during my lunch break. My packages were picked up from my porch while I was on a Zoom call. Incredible service and super professional."</p>
+                    </div>
+                    <div class="customer-info">
+                        <h4>David Miller</h4>
+                        <span>Royal Oak, MI</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p>"Super fast, extremely polite driver, and I got my digital receipt within two hours. Worth every single penny."</p>
+                    </div>
+                    <div class="customer-info">
+                        <h4>Elena Rostova</h4>
+                        <span>Ann Arbor, MI</span>
                     </div>
                 </div>
             </div>
-            <div class="text-center text-xs tracking-widest text-slate-600">
-                &copy; 2026 EVERY RETURN INC. ALL RIGHTS RESERVED.
+        </div>
+    </section>
+
+    <!-- Coverage Area Section -->
+    <div class="container" style="margin-bottom: 5rem;">
+        <div class="coverage-banner">
+            <div class="coverage-content">
+                <h3>Now Serving Metro Detroit</h3>
+                <p>We are currently active across greater Detroit including Birmingham, Royal Oak, Troy, West Bloomfield, Ann Arbor, and surrounding communities. Expanding nationwide soon!</p>
+            </div>
+            <div>
+                <a href="https://every-return.web.app/" class="btn btn-primary">Check My Zip Code</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding" style="background: var(--white); border-top: 1px solid #E2E8F0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Frequently Asked Questions</h2>
+                <p>Got questions? We've got answers.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What is EveryReturn?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>EveryReturn is an on-demand doorstep package return pickup service operating in Metro Detroit that collects online shopping returns so customers never have to leave home or wait in lines.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How much does EveryReturn cost?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Standard returns range between $15 and $25 depending on distance and store type. Oversized items are an additional +$25. There are no monthly subscriptions or hidden fees.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How long does pickup take?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can choose a convenient 2-hour window during booking. Our driver will arrive during your selected window to pick up your packages from your doorstep.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do I need a shipping label?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No! If your store requires a QR code or printed label, just upload your return barcode or photo, and our driver handles label generation or QR scanning at drop-off.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Can you return oversized items?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we handle large and oversized items (furniture, heavy gear, large appliances) for a small additional fee of +$25.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What stores do you support?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We support Amazon, UPS Drop-off, FedEx, Kohl's, Target, Walmart, and nearly any retail store with an in-person return desk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <div class="container">
+        <section class="final-cta">
+            <h2>Ready to Stop Running Errands?</h2>
+            <p>Schedule your first pickup in under 60 seconds and reclaim your afternoon.</p>
+            <a href="https://every-return.web.app/" class="btn btn-primary">
+                Schedule My First Return <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
+                        <i class="fa-solid fa-box-open" style="color: var(--primary);"></i> Every<span>Return</span>
+                    </a>
+                    <p style="color: var(--gray-600); max-width: 320px; font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        Return anything. Without leaving home. On-demand package return pickup service for busy households and professionals.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#calculator">Pricing & Calculator</a></li>
+                        <li><a href="#impact">Community Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EveryReturn Inc. All rights reserved.</p>
+                <p>Proudly built for Metro Detroit.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Embedded JavaScript -->
+    <script>
+        // Toggle Mobile Navigation Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+
+        // FAQ Accordion Functionality
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Instant Estimate Calculator Logic
+        function calculateEstimate() {
+            const count = parseInt(document.getElementById('itemCount').value) || 1;
+            const size = document.getElementById('itemSize').value;
+            const distance = document.getElementById('distance').value;
+
+            let base = 15;
+            if (size === 'medium') base = 20;
+            if (size === 'large') base = 40;
+
+            let total = base + ((count - 1) * 5);
+            if (distance === 'suburb') total += 5;
+
+            document.getElementById('calcResult').innerText = '$' + total.toFixed(2);
+        }
+
+        // Navbar Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 20) {
+                navbar.style.boxShadow = 'var(--shadow-md)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
